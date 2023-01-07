@@ -1,5 +1,7 @@
 import 'package:anobanko/common/colors.dart';
+import 'package:anobanko/model/numbers.dart';
 import 'package:anobanko/view/widgets/button.dart';
+import 'package:anobanko/view/widgets/keybord_button.dart';
 import 'package:flutter/material.dart';
 
 class ListOfCurricies extends StatelessWidget {
@@ -218,17 +220,11 @@ class ListOfCurricies extends StatelessWidget {
                                                       itemBuilder:
                                                           (BuildContext context,
                                                               int index) {
-                                                        return Container(
-                                                          child: Center(
-                                                            child: Text(
-                                                              index.toString(),
-                                                              style:
-                                                                  const TextStyle(
-                                                                      fontSize:
-                                                                          24),
-                                                            ),
-                                                          ),
-                                                        );
+                                                        return Mybutton(
+                                                            child:
+                                                                numbers[index]
+                                                                    .toString(),
+                                                            onTap: () {});
                                                       },
                                                     ),
                                                   )
